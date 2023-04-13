@@ -1,0 +1,50 @@
+<!-- <mat-toolbar color="grey" fxLayout="row wrap" fxLayout.xs="column">
+    <span>Infokalash</span>
+    <span class="toolbar-item-spacer"></span>
+    <button mat-icon-button matTooltip="Notifications" style="background-color: transparent; border: none;">
+      <mat-icon>notifications</mat-icon>
+    </button>    
+    <button mat-icon-button matTooltip="My Account" [matMenuTriggerFor]="userAccountMenu" style="background-color: transparent; border: none;">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #userAccountMenu="matMenu">
+      <button mat-menu-item routerLink="#">
+        <mat-icon>person</mat-icon><span>My Account</span>
+      </button>
+      <button mat-menu-item routerLink="#">
+        <mat-icon>settings</mat-icon><span>Settings</span>
+      </button>
+      <button mat-menu-item routerLink="#">
+        <mat-icon>help</mat-icon><span>Help</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item routerLink="#">
+        <mat-icon>exit_to_app</mat-icon> -->
+        <!-- <app-navbar [Content1]="Menu" [Content2]="HR" [Content3]="Admin" [Content4]="Lead" [Content5]="Manager"></app-navbar> -->
+
+        <app-navbar [dashboardMenuOptions]="dashboardMenuOptions"></app-navbar>
+
+        <div class="container w-100 my-auto mt-5">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5 shadow p-4">
+              <a class="over" routerLink="/basic-details"><app-card  clickhere="Click here" content="Task Raised & Time Sheet"  ></app-card></a>
+                <a class="over" routerLink="/leave-policy"><app-card  clickhere="Click here" content="Leave Management 
+                    & Holidays"></app-card></a>
+                <app-card class="over" clickhere="Click here" content="Learning 
+                & Development"></app-card>
+                <app-card class="over" clickhere="Click here" content="Rewards 
+                & Recognition"></app-card>
+                <app-card class="over" clickhere="Click here" content="Salary & Pay Slip"></app-card>
+                <app-card class="over" clickhere="Click here" content="Employee Friendly Facilities"></app-card>
+                <app-card class="over" clickhere="Click here" content="Reimbursement"></app-card>
+                <app-card class="over" clickhere="Click here" content="Role
+
+                & Responsibility"></app-card>
+            </div>
+          </div>
+
+        
+ 
+    
+  
+
+        
