@@ -22,7 +22,7 @@
         <mat-icon>exit_to_app</mat-icon> -->
         <!-- <app-navbar [Content1]="Menu" [Content2]="HR" [Content3]="Admin" [Content4]="Lead" [Content5]="Manager"></app-navbar> -->
 
-        <app-navbar [dashboardMenuOptions]="dashboardMenuOptions"></app-navbar>
+        <!-- <app-navbar [dashboardMenuOptions]="dashboardMenuOptions"></app-navbar>
 
         <div class="container w-100 my-auto mt-5">
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5 shadow p-4">
@@ -36,15 +36,51 @@
                 <app-card class="over" clickhere="Click here" content="Salary & Pay Slip"></app-card>
                 <app-card class="over" clickhere="Click here" content="Employee Friendly Facilities"></app-card>
                 <app-card class="over" clickhere="Click here" content="Reimbursement"></app-card>
-                <app-card class="over" clickhere="Click here" content="Role
+                <app-card class="over" clickhere="Click here" content="Role & Responsibility"></app-card>
+            </div>
+          </div> -->
 
-                & Responsibility"></app-card>
+          
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col p-0">
+                <app-navbar class="nav fixed-top"></app-navbar>
+                <img src="../../assets/img1.jpg" alt="..." class="w-100 p-1">
+              </div>
+            </div>
+          </div>
+          <!-- Second container -->
+          <div class="container pb-3 mt-3">
+            <div class="row justify-content-around mt-2 text-center">
+              <h1 class="mb-3 welcome">welcome to Employee Dashboard</h1>
+              <div class="col-md-3 text-center">
+                <app-card  routerLink="/leave-policy" class="icon" [Img]="'../../assets/leave.gif'" [title]="'Leave Management and Holidays'"></app-card>
+              </div>
+              <div class="col-md-3 text-center">
+                <app-card class="icon" [Img]="'../../assets/task.gif'" [title]="'Task Raised and Time Sheet'"></app-card>
+              </div>
+              <div class="col-md-3 text-center">
+                <app-card class="icon" [Img]="'../../assets/learningAndDev.gif'" [title]="'Learning and Development'"></app-card>
+              </div>
+              <div class="col-md-3 text-center">
+                <app-card class="icon" [Img]="'../../assets/reward.gif'" [title]="'Rewards and Recognition'"></app-card>
+              </div>
+            </div>
+
+            <div class="row mt-4 justify-content-between">
+              <div class="col-md-3 text-center">
+                <app-card class="icon" [Img]="'../../assets/salary.gif'" [title]="'Salary and Pay Slip'"></app-card>
+              </div>
+              <div class="col-md-3 text-center">
+                <app-card class="icon" [Img]="'../../assets/friendlyFacility.gif'" [title]="'Employee Friendly Facilities'"></app-card>
+              </div>
+              <div class="col-md-3 text-center">
+                <app-card class="icon" [Img]="'../../assets/reimbursement.gif'" [title]="'Reimbursement'"></app-card>
+              </div>
+              <div class="col-md-3 text-center">
+                <app-card class="icon" [Img]="'../../assets/responsibility.gif'" [title]="'Role and Responsibility'"></app-card>
+              </div>
             </div>
           </div>
 
-        
- 
-    
   
-
-        

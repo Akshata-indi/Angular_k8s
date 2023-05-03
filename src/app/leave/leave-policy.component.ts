@@ -8,35 +8,17 @@ import { GraphComponent } from '../graph/graph.component';
   styleUrls: ['./leave-policy.component.css']
 })
 export class LeavePolicyComponent {
-// Days: number = 0; // initialize
-// EndDate: any;
-// StartDate: any;
-// reason: any;
-// Sick: any;
-// Casual: any;
-// leaveType: any;
-  dashboardMenuOptions: (string | { label: string; link: string; })[] = [];
 
+  startDate!: Date;
+  endDate!: Date;
 
-// calculateDays(): void {
-//   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-//   const startDate = new Date(this.StartDate);
-//   const endDate = new Date(this.EndDate);
-//   const diffDays = Math.round(Math.abs((startDate.getTime() - endDate.getTime()) / oneDay)) + 1;
-//   this.Days = diffDays;
-// }
+  calculateDays(): number {
+    const start = new Date(this.startDate);
+    const end = new Date(this.endDate);
+    const diff = Math.abs(end.getTime() - start.getTime());
+    return Math.ceil(diff / (1000 * 60 * 60 * 24));
+  }
 
-//   @ViewChild('navbarComponent')
-//   navbarComponent: NavbarComponent = new NavbarComponent;
-
-  
-//   Home = 'Home';
-//   Contact = 'Contact';
-//   About = 'About';
-
-//   onSubmit() {
-//     // code to submit the form
-//   }
 
 
 }

@@ -15,16 +15,26 @@
     align-items: center;
     justify-content: center;
 }  */
-.over {
+
+/* .over {
     transition: transform 0.2s ease;
     
-  }
+  } */
   
-  .over:hover {
-    transform: scale(1.05) translateY(-5px);
+  /* .over:hover {
+    transform: scale(1.05) translateY(-5px); */
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
-  }
-a{
+  /* } */
+/* a{
     text-decoration: none;
-  }
+  } */
+
+.welcome{
+  color: rgb(93, 156, 237);
+  
+}
+
+.icon{
+  color: rgb(58, 58, 114);
+}
 

@@ -1,104 +1,129 @@
+<div class="container leave-container shadow mt-4">
+  <div class="row">
 
-<!-- <app-navbar #navbarComponent [Content1]="Home" [Content2]="Contact" [Content3]="About"></app-navbar>
-<div style="height: 80px;"></div> Replace 80px with the actual height of your navbar -->
-<!-- <h2>Apply Leave</h2>   -->
-<!-- <app-navbar #navbarComponent [Content1]="Home" [Content2]="Contact" [Content3]="About"></app-navbar> -->
+    <div class="header bg-secondary shadow p-3">
+      Header
+    </div>
+    <span class="mt-3 mx-2">
+      <h2> Submit A Request</h2>
+    </span>
+    <div class="row">
+      <div class="col-sm-8 form">
+        <div class="container leave-container mx-3">
+          <div class="row d-flex">
+            <div class="col-6">
+              <span class="leaveType">
+                <h6>Types of Leave</h6>
+              </span>
+            </div>
+            <div class="col-6">
+              <span class="leaveType">
+                <h6>Leave Balance</h6>
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="card w-75 p-1 mb-3 mx-3">
+                <div class="card-body">
+                  <div class="card-title">Casual Leave</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card w-75 p-1 mx-3">
+                <div class="card-body">
+                  <div class="card-title">Sick Leave</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card w-75 p-1 mb-3 mx-3">
+                <div class="card-body">
+                  <div class="card-title">Leave Balance</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card w-75 p-1 mx-3">
+                <div class="card-body">
+                  <div class="card-title">Other Leaves</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
 
-<!-- app.component.html -->
-<!-- app.component.html -->
-<!-- app.component.html -->
-<app-navbar [dashboardMenuOptions]="dashboardMenuOptions"></app-navbar>
+          <div class="row">
+            <div class="col-6 form-check w-25 mx-2">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                checked />
+              <label class="form-check-label" for="exampleRadios1">
+                Full Day
+              </label>
+            </div>
 
-<div class="container-fluid  shadow">
-  <div class="Leave-container">
-    <div class="card ">
-      <span class="header">Submit a Request</span>
-      <div class="form-container active secondCont mt-3 shadow"> 
-        <div class="row">
-          <div class="col-md-3 mt-4 a" style="margin-left: 10px;">
-                Types of Leaves
-                <!-- <div class="container"> -->
-                  <!-- <div id="lion-card"> -->
-                      <div class="col-md-12 card mb-3 mt-3 b">
-                          <div class="card-body">
-                              <h5 class="card-title">
-                                  <div class="form-check">
-                                      <input class="form-check-input" type="radio" name="flexRadioDefault">
-                                      Casual Leave
-                                  </div>
-                              </h5>
-                          </div>
-                      </div>
-                  <!-- </div> -->
-                  <!-- <div id="lion-card"> -->
-                      <div class="card mb-4 b">
-                          <div class="card-body">
-                              <h5 class="card-title">
-                                  <div class="form-check">
-                                      <input class="form-check-input" type="radio" name="flexRadioDefault">
-                                      <label>Sick Leave</label>
-                                  </div>
-                              </h5>
-                          </div>
-                      </div>
-                  <!-- </div> -->
-              <!-- </div> -->
+            <div class="col-2 form-check w-25 mx-2">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
+              <label class="form-check-label" for="exampleRadios2">
+                Half Day
+              </label>
+            </div>
+            <div class="col-4 ">
+              <p >Number of days: {{ calculateDays() + 1 }}</p>
+            </div>
           </div>
 
-          <div class="col-md-3 mt-4 a" style="margin-left: 80px;">
-                Leave Balance
+
+          <div class="row">
+            <div class="col-6">
+              <p>Start date: <br />
+                  <span style="border: 1px red solid; padding: 5px;">{{ startDate | date }}</span> </p>
+            </div>
+            <div class="col-6">
+              <p>End date:<br />
+                 {{ endDate | date }}</p>
+            </div>
+
+          </div>
+
+
+
+          <div class="container">
+          <div class="row ">
+            <div class="col-6">
+              <mat-card class="demo-inline-calendar-card">
+                <mat-calendar [(selected)]="startDate"></mat-calendar>
+              </mat-card>
+              <!-- <p>Selected start date: {{ startDate | date }}</p> -->
+            </div>
+            <div class="col-6">
+              <mat-card class="demo-inline-calendar-card">
+                <mat-calendar [(selected)]="endDate" [minDate]="startDate"></mat-calendar>
+              </mat-card>
+              <!-- <p>Selected end date: {{ endDate | date }}</p> -->
+            
+              <!-- <p *ngIf="startDate && endDate">Number of days: {{ calculateDays() + 1 }}</p> -->
+            </div>
           </div>
         </div>
-        
-        <hr>
+        <div class="row mt-3">
+          <div class="col-4">
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+              <label for="floatingTextarea">Reasons</label>
+            </div>
+          </div>
+          <div class="col-2 doc offset-6">
+            Upload Doc
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
-</div>
+      <div class="col-3 offset-1 history">
+        <h2>Graph</h2>
+      </div>
 
 
-
-
-
-
-
-
-
-<!-- <div class="container" style="margin-top: 80px;">
-  <h1><strong> Leave Application</strong> </h1>
-  <form (ngSubmit)="onSubmit()" #leaveForm="ngForm">
-    <div class="form-group">
-      <label for="Select leave">Select Leave: </label>
-      <select id="leaveType" name="leaveType" [(ngModel)]="leaveType" required>
-        <option value="" disabled selected>Other</option>
-        <option value="sick">Sick Leave</option>
-        <option value="casual">Casual Leave</option>
-        <option value="vacation">Vacation Leave</option>
-        <option value="maternity">Maternity Leave</option>
-        <option value="paternity">Paternity Leave</option>
-      </select>
-    </div><br>
-    <div class="form-group">
-      <label for="Type of leave">Type of leave:</label>
-      <mat-radio-group aria-label="Select an option">
-        <mat-radio-button value="1">HD</mat-radio-button>
-        <mat-radio-button value="2">FD</mat-radio-button>
-      </mat-radio-group>
-    </div> <br>
-    <div class="form-group">
-      <label for="StartDate">Start Date:</label>
-      <input type="date" id="StartDate" name="StartDate" [(ngModel)]="StartDate" required (change)="calculateDays()">
-      &nbsp;
-      <label for="EndDate">End Date:</label>
-      <input type="date" id="EndDate" name="EndDate" [(ngModel)]="EndDate" required (change)="calculateDays()">
-    </div> <br>
-    <div class="form-group">
-      <label for="No Of Days">No Of Days: {{Days}}</label>
-    </div> <br>
-    <div class="form-group">
-      <label for="reason">Reason:</label>
-      <textarea class="form-control" id="reason" name="reason" [(ngModel)]="reason" required ></textarea>
-    </div><br>
-    <button type="submit" class="btn btn-primary" [disabled]="!leaveForm.valid">Submit</button>
-  </form>
-</div> -->
+    </div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -6,13 +6,16 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  @Input() title?: string;
-  @Input() content?: string;
-  @Input() img?: string;
-  @Input() clickhere?: string;
+
+  @Input()
+  Img!: string;
+  @Input() content!: TemplateRef<any>;
+
+  @Input() title!: string;
+  constructor() {}
+
 
   ngOnInit() {
-    console.log(this.img); // Output: Card image
-    console.log(this.content); // Output: undefined
+    // console.log(this.content); // Output: undefined 
   }
 }

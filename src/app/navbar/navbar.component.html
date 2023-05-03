@@ -1,19 +1,27 @@
-<!-- navbar.component.html -->
 
-<nav class="navbar navbar-expand-lg clr">
-    <img src="../../assets/infokalash.png" alt="img" class="logo"/>
-    <a class="navbar-brand" href="https://www.infokalash.com/" style="margin-left: 10px;">Infokalash</a>
-    <ul>
-      <li class="mn" *ngFor="let option of menuOptions">
-        <a href="/dashboard">{{ option}}</a>
-        
-
+<nav class="navbar navbar-expand-md ">
+  <div class="navbar-brand">Infokalash</div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav space mr-auto">
+      <li class="nav-item">
+        <div class="nav-link">HR</div>
       </li>
-      <li class="mn" *ngFor="let option1 of dashboardMenuOptions">
-        <a href="/login">{{ option1}}</a>
+      <li class="nav-item">
+        <div class="nav-link">Admin</div>
+      </li>
+      <li class="nav-item">
+        <div class="nav-link">Lead</div>
+      </li>
+      <li class="nav-item">
+        <div class="nav-link">Manager</div>
       </li>
     </ul>
-  </nav>
+  </div>
+</nav>
+
   
 
 <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">

@@ -30,6 +30,21 @@
   margin: 10px;
 } */
 
-hr{
-  text-decoration: none;
+
+
+.card {
+  transition: all 0.3s;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
 }
+
+.card:hover {
+  border: 1px #6b8bc6 solid;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #959bd0;
+}
+
+.card-title{
+  font-size: medium;
+}
+

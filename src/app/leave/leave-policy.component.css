@@ -1,66 +1,18 @@
-/* CSS
-textarea.reason-box {
-  height: 100px !important;
-} */
-.Leave-container {
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* justify-content: flex-start; */
-  /* align-items: center; */
-  height: 100vh;
-  background-color: #f2f1f1f7;
-  border-radius: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top : 65px
+.leave-container{
+  border:2px solid rgb(10, 107, 107);
 }
 
-.navbar{
-  border-radius: 4px;
-
-}
-
-.card{
-  height: 65px;
-  border-radius: 20px 20px 0px 0px;
-}
 .header{
-  margin-top: 35px;
-  margin-left: 10px;
-  font-family: 'Hind', sans-serif;
-/* font-family: 'Sono', sans-serif; */
-  font-size:24px;
-  font-weight: 200px;
-  color: rgb(91, 91, 93);
-  width: 250px;
-}
-.form-container{
-  margin-left: 40px;
-  margin-right: 50px;
-  border-radius: 10px 10px 10px 10px;
-}
-.btn{
-  background-color: rgb(188, 185, 185);
-  margin-right: 25px;
-  width: 90px;
-  
-}
-.a{
-  font-family: 'Hind', sans-serif;
-  color: rgb(92, 92, 92);
-  font-size:20px;
+  border: 1px red solid
 }
 
-.secondCont{
-  /* border:  2px red solid; */
-  background-color: rgb(255, 255, 255);
-  width: 1000px;
-  border-radius: 10px;
+.history{
+  border: green 2px solid;
 }
-.b{
-  border-radius: 10px;
+.count{
+  border: blue 2px solid;
 }
-hr{
-  margin-left: 12px;
-  margin-right: 12px;
+
+.doc{
+  border:red 2px solid;
 }

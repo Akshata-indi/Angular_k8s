@@ -1,5 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
-import { NavbarComponent } from '../navbar/navbar.component';
+import { Component, Input} from '@angular/core';
+// import { NavbarComponent } from '../navbar/navbar.component';
+import { CardComponent } from '../card/card.component';
 
 
 
@@ -18,10 +19,11 @@ export class DashboardComponent {
   // Manager: string = "Manager"
   // Chart: string = "Org Chart"
 
-  dashboardMenuOptions = ['Admin', 'HR', 'Manager', 'Profile'];
+  // dashboardMenuOptions = ['Admin', 'HR', 'Manager', 'Profile'];
 
   ngOnInit() {
-    console.log('dashboardMenuOptions', this.dashboardMenuOptions);
+  // @Input() Img ="../../assets/icon1.png "
+    // console.log('dashboardMenuOptions', this.dashboardMenuOptions);
   }
     
   // @ViewChild('navbarComponent')

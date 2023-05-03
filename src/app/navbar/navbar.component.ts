@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class NavbarComponent {
   @Input()
-  menuOptions: (string | { label: string, link: string })[] = [];
+  content!: TemplateRef<any>;
+  
   @Input()
-  dashboardMenuOptions: (string | { label: string, link: string })[] = [];
+  // dashboardMenuOptions: (string | { label: string, link: string })[] = [];
  
   // show = true;
   // @Input() Content1?: String;
@@ -21,7 +22,7 @@ export class NavbarComponent {
   // @Input() clickhere?: string;
 
   ngOnInit() {
-    console.log('menuOptions', this.menuOptions);
+  
   }
   //   console.log('Content2:', this.Content2);
   //   console.log('Content3:', this.Content3);
