@@ -1,2 +1,194 @@
-<!-- <app-navbar #navbarComponent [Content1]="Home" [Content2]="Contact" [Content3]="About"></app-navbar> -->
-
+<nav class="navbar navbar-expand-lg clr ">
+    <img src="../../assets/infokalash.png" alt="img" class="logo"/>
+    <a class="navbar-brand" href="https://www.infokalash.com/" style="margin-left: 10px;">Infokalash</a>
+    </nav>
+  
+  <div class="container mt-3 " id="first-container">
+    <!-- {/* first row header */} -->
+    <div class="row ">
+      <div class="col-12 header p-3 mb-4"></div>
+    </div>
+    <h3 class="page_title mx-3 p-2 fs-4">1. Employee Basic Details</h3>
+  
+    <!-- {/* 2nd row containers it have two col  */} -->
+    <div class="row ">
+      
+      <!-- {/* first Container (1st col) */} -->
+      <div class="col-lg-8  mx-auto">
+        <div class="container  shadow  mb-4">
+          <div class="row secondtitle ">
+            <div class="col-12 mt-3   mx-3">
+              <h3 class="fs-5">Personal information</h3>
+  
+            </div>
+          </div>
+          <div class="row row-cols-3 mx-4">
+            <div class="col my-3">
+              <div class="mb-3">
+                <label for="firstNameInput" class="form-label fw-semibold">Firstname</label>
+                <input type="text" class="form-control w-75 p-2" id="firstNameInput" placeholder="Enter your first name"
+                  [(ngModel)]="firstName" (input)="onFirstNameInputChange($event)" #firstNameInput="ngModel" required>
+                  <!-- <div *ngIf="firstNameInput.invalid && (firstNameInput.dirty || firstNameInput.touched)" 
+           class="text-danger">
+        <div *ngIf="firstNameInput.errors.required">
+          Firstname is required.
+        </div>
+      </div> -->
+              </div>
+            </div> 
+            
+            <div class="col my-3  ">
+              <div class="mb-3">
+                <label for="middleNameInput" class="form-label fw-semibold">Middlename</label>
+                <input type="text" class="form-control w-75 p-2" id="middleNameInput" placeholder="Enter your middle name"
+                  [(ngModel)]="middleName" (input)="onMiddleNameInputChange($event)" required>
+              </div>
+            </div>
+  
+            <div class="col my-3">
+              <div class="mb-3">
+                <label for="lastNameInput" class="form-label fw-semibold">Lastname</label>
+                <input type="text" class="form-control w-75 p-2" id="lastNameInput" placeholder="Enter your last name"
+                  [(ngModel)]="lastName" (input)="onLastNameInputChange($event)" required>
+              </div>
+            </div>
+            
+            <div class="col my-3">
+              <div class="mb-3">
+                <label for="lastNameInput" class="form-label fw-semibold">Gender</label>
+                <select
+                  id="gender"
+                  class="form-control w-75 p-2"
+                  placeholder="Select Gender"
+                  [(ngModel)]="gender" (input)="onGenderInputChange($event)"required>
+                  <option value="">--Select--</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+  
+            <div class="col my-3">
+              <div class="mb-3">
+                <label
+                  class="form-label fw-semibold">Date of birth</label>
+                <input
+                  type="date"
+                  class="form-control w-75 p-2"
+                  placeholder="Select date of birth"
+                  [(ngModel)]="dateOfBirth" (input)="onDateInputChange($event)"required>
+              </div>
+            </div>
+  
+            <div class="col my-3">
+              <div class="mb-3">
+                <label
+                  class="form-label fw-semibold">Age</label>
+                <input
+                  type="number"
+                  class="form-control w-75 p-2"
+                  [(ngModel)]="age" (input)="onAgeInputChange($event)"disabled/>
+              </div>
+            </div>
+  
+            <div class="col my-3">
+              <div class="mb-3">
+                <label
+                  class="form-label fw-semibold">Blood group</label>
+                <select
+                  id="bloodGroup"
+                  class="form-control w-75 p-2"
+                  placeholder="Select blood group"
+                  [(ngModel)]="bloodGroup" (input)="onBloodGroupInputChange($event)"required>
+                  <option value="">--Select--</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                </select>
+              </div>
+            </div>
+  
+            <div class="col my-3">
+              <div class="mb-2">
+                <label
+                  class="form-label fw-semibold">Date of joining</label>
+                <input
+                  type="date"
+                  class="form-control w-75 p-2"
+                  placeholder="Select date of joining"
+                  [(ngModel)]="dateOfJoining" (input)="onDojInputChange($event)"required>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row  ">
+            <div class="col-2  mx-5">
+              <button routerLink="/details"
+                class=" back  fs-5 fw-semibold  mb-4 mt-3 "
+                type="button">back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- {/* Second container (2nd col)*/} -->
+  
+      <div class="col-lg-3 mx-auto mb-2">
+        <div class="container shadow ">
+          <div class="row secondtitle">
+            <div class="col-12 my-3 mx-3"></div>
+          </div>
+          <div class="row row-cols-3 mx-4">
+            <div class="col-8 my-3 ">
+              <div class="mb-4 my-3">
+                <label
+                  class="form-label fw-semibold">Emp ID</label>
+                <input
+                  type="text"
+                  class="form-control "
+                  [(ngModel)]="empId" (input)="onEmpIdInputChange($event)"required>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row row-cols-3 mx-4">
+            <div class="col-8 my-3 ">
+              <div class="mb-3">
+                <label
+                  class="form-label fw-semibold">Phone</label>
+                <input
+                  type="phone"
+                  class="form-control p-2"
+                  [(ngModel)]="phoneNum" (input)="onPhoneInputChange($event)"required/>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row row-cols-3 mx-4">
+            <div class="col-8 my-3 ">
+              <div class="mb-3">
+                <label
+                  class="form-label fw-semibold">Email ID
+                </label>
+                <input
+                  type="email"
+                  class="form-control p-1 mb-2"
+                  [(ngModel)]="emailId" (input)="onEmailInputChange($event)"required/>
+              </div>
+            </div>
+          </div>
+          <div class="row  ">
+            <div class="col-4  mx-5 ">
+              <button class="save w-100 fs-5 fw-semibold my-3 mb-4" type="submit" (click)="handleSubmit()">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
